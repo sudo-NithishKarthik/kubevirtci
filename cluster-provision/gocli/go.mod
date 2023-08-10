@@ -19,6 +19,8 @@ require (
 	k8s.io/apimachinery v0.20.6
 )
 
+require golang.org/dl v0.0.0-20230808144451-a2f8bd9f2998 // indirect
+
 require (
 	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/Microsoft/hcsshim v0.8.25 // indirect

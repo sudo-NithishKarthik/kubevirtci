@@ -90,6 +90,7 @@ func NewRunCommand() *cobra.Command {
 	run.Flags().Uint("ocp-port", 0, "port on localhost for the ocp cluster")
 	run.Flags().Uint("k8s-port", 0, "port on localhost for the k8s cluster")
 	run.Flags().Uint("ssh-port", 0, "port on localhost for ssh server")
+	run.Flags().Uint("syscalls-tracer-port", 0, "port on localhost for syscalls-tracer pod")
 	run.Flags().Uint("prometheus-port", 0, "port on localhost for prometheus server")
 	run.Flags().Uint("grafana-port", 0, "port on localhost for grafana server")
 	run.Flags().Uint("dns-port", 0, "port on localhost for dns server")
@@ -163,6 +164,7 @@ func run(cmd *cobra.Command, args []string) (retErr error) {
 	utils.AppendTCPIfExplicit(portMap, utils.PortRegistry, cmd.Flags(), "registry-port")
 	utils.AppendTCPIfExplicit(portMap, utils.PortPrometheus, cmd.Flags(), "prometheus-port")
 	utils.AppendTCPIfExplicit(portMap, utils.PortGrafana, cmd.Flags(), "grafana-port")
+	utils.AppendTCPIfExplicit(portMap, utils.PortSyscallsTracer, cmd.Flags(), "syscalls-tracer-port")
 	utils.AppendUDPIfExplicit(portMap, utils.PortDNS, cmd.Flags(), "dns-port")
 
 	qemuArgs, err := cmd.Flags().GetString("qemu-args")
