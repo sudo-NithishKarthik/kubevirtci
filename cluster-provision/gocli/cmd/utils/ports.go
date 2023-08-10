@@ -34,7 +34,11 @@ const (
 	PortUploadProxy = 31001
 	//PortDNS contains DNS port
 	PortDNS = 31111
+	//PortSyscallsTracer contains syscalls tracer port
+	PortSyscallsTracer = 32222
 
+  // PortNameSyscallsTracer contains the port where syscalls tracer pod is exposed on the node
+	PortNameSyscallsTracer = "syscalls-tracer-port"
 	// PortNameSSH contains control-plane node SSH port name
 	PortNameSSH = "ssh"
 	// PortNameSSHWorker contains worker node SSH port name

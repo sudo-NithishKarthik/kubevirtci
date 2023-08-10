@@ -182,6 +182,8 @@ go.opencensus.io/internal
 go.opencensus.io/trace
 go.opencensus.io/trace/internal
 go.opencensus.io/trace/tracestate
+# golang.org/dl v0.0.0-20230808144451-a2f8bd9f2998
+## explicit; go 1.11
 # golang.org/x/crypto v0.1.0
 ## explicit; go 1.17
 golang.org/x/crypto/blowfish
